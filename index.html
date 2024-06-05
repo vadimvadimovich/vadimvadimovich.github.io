@@ -54,13 +54,18 @@
 
     <script>
         let slideIndex = 0;
-
+        function autoReloadPage(interval) {
+            setTimeout(function() {
+                location.reload();
+            }, interval);
+        }
         function changeSlide(n) {
             const slides = document.querySelectorAll('.carousel-slide');
             slides[slideIndex].classList.remove('active');
             slideIndex = (slideIndex + n + slides.length) % slides.length;
             slides[slideIndex].classList.add('active');
         }
+        autoReloadPage(40000);
         setInterval(() => {
             changeSlide(1);
         }, 10000);
