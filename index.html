@@ -47,6 +47,9 @@
         <div class="carousel-slide">
             <img src="3.png">
         </div>
+        <div class="carousel-slide">
+            <img src="4.png">
+        </div>
     </div>
 
     <script>
@@ -58,11 +61,9 @@
             slideIndex = (slideIndex + n + slides.length) % slides.length;
             slides[slideIndex].classList.add('active');
         }
-
-        // Optional: Auto-change slides every 15 seconds
         setInterval(() => {
             changeSlide(1);
-        }, 15000);
+        }, 10000);
     </script>
 </body>
 </html>
